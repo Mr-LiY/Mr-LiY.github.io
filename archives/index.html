@@ -76,14 +76,24 @@
                                 
                                 <li class="timeline-item">
                                     <div class="timeline-info">
-                                        <span class="gradient-text">三月 11, 2020</span>
+                                        <span class="gradient-text">三月 17, 2020</span>
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/2020/03/11/hello-world/">Hello World</a>
+                                        <a class="timeline-title" target="_self" href="/2020/03/17/%E5%8E%9F%E7%94%9FJS%E5%AE%9E%E7%8E%B0%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E5%B0%8F%E6%B8%B8%E6%88%8F/">原生JS实现飞机大战小游戏</a>
                                         <p>
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+                                            @TOC废话不多说我们直接开始吧
+首先是最基础的html结构，三个小飞机图来表示己方剩余的血量，剩下的css样式自己设置即可。设置成这样就可以了
+先创建一个游戏引擎
+var Engine = {
+    //刚开始的游戏状态
+    gameStatus: false,
+    //所有敌机
+    enemy: {},
+    //子弹
+    bullet: {},
+    //得分
+ ...
                                         </p>
                                     </div>
                                 </li>
