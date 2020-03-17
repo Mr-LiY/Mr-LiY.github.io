@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
     <meta name="description" content="Mr-mr(屑级码农)的博客,@TOC废话不多说我们直接开始吧
-首先是最基础的html结构，三个小飞机图来表示己方剩余的血量，剩下的css样式自己设置即可。设置成这样就可以了
-先创建一个游戏引擎
+首先是最基础的html结构，三个小飞机图来表示己方剩余的血量，剩下的css样式自己设置即可。设置成这样就可以了//先创建一个游戏引擎
 var Engine = {
- ,"> 
+,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="成事者乃无言而进之愚 误事者乃踌躇不前之智。" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -103,13 +102,13 @@ var Engine = {
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    14k
+                    17k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    13 mins.
+                    15 mins.
                 </span>
                 
                 
@@ -142,8 +141,7 @@ var Engine = {
     <div class='main'>
         <div class="content markdown animated fadeIn">
             <p>@<a href="原生js实现飞机大战小游戏">TOC</a><br><strong>废话不多说我们直接开始吧</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200317144333483.jpg" alt="在这里插入图片描述"><br>首先是最基础的html结构，三个小飞机图来表示己方剩余的血量，剩下的css样式自己设置即可。<br><img src="https://img-blog.csdnimg.cn/20200317133843581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br>设置成这样就可以了</p>
-<p><img src="https://img-blog.csdnimg.cn/20200317143407792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>先创建一个游戏引擎</p>
+<p><img src="https://img-blog.csdnimg.cn/20200317144333483.jpg" alt=""><br>首先是最基础的html结构，三个小飞机图来表示己方剩余的血量，剩下的css样式自己设置即可。<br><img src="https://img-blog.csdnimg.cn/20200317133843581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br>设置成这样就可以了<br><img src="https://img-blog.csdnimg.cn/20200317143407792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br>//先创建一个游戏引擎</p>
 <pre><code class="javascript">var Engine = {
     //刚开始的游戏状态
     gameStatus: false,
@@ -277,7 +275,7 @@ var Engine = {
     }
 };
 Engine.init();</code></pre>
-<p>子弹嘛，设置多点才有游戏体验<br>两下就死了有啥好玩的<br><img src="https://img-blog.csdnimg.cn/20200317144246307.jpg" alt="在这里插入图片描述"><br>因为子弹需要大量的创建,所以创建一个子弹的构造函数<br>因为子弹是从主角机中间发射过来的所以需要获取主角机的x,y这里用l和t表示</p>
+<p>子弹嘛，设置多点才有游戏体验<br>两下就死了有啥好玩的<br><img src="https://img-blog.csdnimg.cn/20200317144246307.jpg" alt=""><br>因为子弹需要大量的创建,所以创建一个子弹的构造函数<br>因为子弹是从主角机中间发射过来的所以需要获取主角机的x,y这里用l和t表示</p>
 <pre><code class="javascript">function Bullet(l, t) {
             //存储传进来的 l t
             this.l = l;
@@ -352,7 +350,7 @@ Engine.init();</code></pre>
                 delete Engine.bullet[this.id];
             },
         }</code></pre>
-<p>接下来创建主角机。因为主角机只有一架所以直接var一个就可以了<br>当然也可以创建一个构造函数不过不是很有必要<br><img src="https://img-blog.csdnimg.cn/20200317144547181.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>接下来创建主角机。因为主角机只有一架所以直接var一个就可以了<br>当然也可以创建一个构造函数不过不是很有必要<br><img src="https://img-blog.csdnimg.cn/20200317144547181.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""></p>
 <pre><code class="javascript">    var Hero = {
         //初始图片
         self: null,
@@ -472,7 +470,97 @@ Engine.init();</code></pre>
         }
         //在游戏没开始的时候不能出现英雄机和子弹所以Hero.init()要放在引擎里面</code></pre>
 <p>创建敌机</p>
-<pre><code class="javascript">function SmallEnemy() {
+<pre><code class="javascript">        function Enemy(blood, speed, imgs, scroe) {
+            //分数
+            this.scroe = scroe;
+            //敌机left
+            this.left = 0;
+            //敌机top
+            this.top = 0;
+            //敌机血量
+            this.blood = blood;
+            //敌机速度
+            this.speed = speed;
+            //敌机图片集合
+            this.imgs = imgs;
+            //敌机初始化
+            this.self = null;
+            //敌机编号
+            this.id = &#39;&#39;;
+        }
+        Enemy.prototype = {
+            //手动添加构造函数
+            constructor: Enemy,
+            init: function () {
+                //创建一个元素
+                var img = document.createElement(&#39;img&#39;);
+                //将图片路径赋值给它
+                img.src = this.imgs[0];
+                //插入到game中
+                Engine.game.appendChild(img);
+                //赋值给敌机
+                this.self = img;
+                //当图片加载完成以后获取图片的高度和宽度
+                var _this = this;
+                //在函数里面this的指向会改变，所以我们提前保存下来
+                img.onload = function () {
+                    //随机出现的范围为地图减去敌机本身宽度
+                    _this.left = parseInt(Math.random() * 
+                    (Engine.game.offsetWidth - img.offsetWidth));
+                    _this.top = -img.offsetHeight;
+                    img.style.left = _this.left + &#39;px&#39;;
+                    img.style.top = _this.top + &#39;px&#39;;
+                };
+                //生成敌机编号放入引擎的enemy中
+                this.id = Math.random();
+                Engine.enemy[this.id] = this;
+            },
+            //敌机移动，定时器都交给引擎去做
+            move: function () {
+                this.top += this.speed;
+                this.self.style.top = this.top + &#39;px&#39;;
+                //越界判断
+                if (this.top &gt; Engine.game.offsetHeight + 
+                this.self.offsetHeight) {
+                    this.destroy();
+                }
+                //判断与英雄机相撞
+                if (Engine.isCompact(this.self, Hero.self)) {
+                    //执行血量下降事件
+                    this.destroy();
+                    //英雄机执行血量下降事件
+                    Hero.die();
+                }
+            },
+            //敌机爆炸事件
+            bang: function () {
+                //创建img
+                var img = document.createElement(&#39;img&#39;);
+                //赋值爆炸图片
+                img.src = this.imgs[1];
+                img.style.zIndex = 0;
+                //固定位置
+                img.style.left = this.left + &#39;px&#39;;
+                img.style.top = this.top + &#39;px&#39;;
+                //加入地图
+                Engine.game.appendChild(img)
+                //爆炸持续300毫秒
+                setTimeout(function () {
+                    img.remove();
+                }, 300);
+            },
+            destroy: function () {
+                //销毁
+                //从页面消失
+                this.self.remove();
+                this.bang();
+                //统计得分
+                Engine.updateScroe(this.scroe);
+                //从内存消失
+                delete Engine.enemy[this.id];
+            },
+        }
+function SmallEnemy() {
        var s = parseInt(Math.random() * 3 + 3);
        Enemy.call(this, 1, s, [&#39;image/enemy1.png&#39;, &#39;image/xx.gif&#39;], 10)
 }
@@ -500,9 +588,7 @@ function LargeEnemy() {
             constructor: LargeEnemy,
             __proto__: Enemy.prototype
         }</code></pre>
-<p>在这之后整个游戏就算勉强能玩了。<br><img src="https://img-blog.csdnimg.cn/20200317144728765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>启动游戏<br><img src="https://img-blog.csdnimg.cn/20200317143432365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200317143454488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>子弹设置的太猛了看起来像某种东西emmmmm…..<br><img src="https://img-blog.csdnimg.cn/20200317143829191.gif" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020031714353586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>游戏结束<img src="https://img-blog.csdnimg.cn/20200317143933444.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">写道最后才发现忘记设置暂停游戏了。索性就放着了以后在写。</p>
-<p>萌新发帖。不足之处请大佬们手下留情。有问题直接指出。我一定虚心接受</p>
-<p><img src="https://img-blog.csdnimg.cn/20200317144800597.gif" alt="在这里插入图片描述"></p>
+<p>在这之后整个游戏就算勉强能玩了。<br><img src="https://img-blog.csdnimg.cn/20200317144728765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br>启动游戏<br><img src="https://img-blog.csdnimg.cn/20200317143432365.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://img-blog.csdnimg.cn/20200317143454488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br>子弹设置的太猛了看起来像某种东西emmmmm…..<br><img src="https://img-blog.csdnimg.cn/20200317143829191.gif" alt=""><br><img src="https://img-blog.csdnimg.cn/2020031714353586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt=""><br>游戏结束<img src="https://img-blog.csdnimg.cn/20200317143933444.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX21pbmdy,size_16,color_FFFFFF,t_70" alt="">写道最后才发现忘记设置暂停游戏了。索性就放着了以后在写。<br>萌新发帖。不足之处请大佬们手下留情。有问题直接指出。我一定虚心接受<br><img src="https://img-blog.csdnimg.cn/20200317144800597.gif" alt=""></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
