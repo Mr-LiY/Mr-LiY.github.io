@@ -308,9 +308,9 @@ Engine.init();</code></pre>
                 //在函数里面this的指向会改变，所以我们提前保存下来
                 img.onload = function () {
                    //因为上面的元素属性有this.left所以我们应该和图片一样赋值给它
-                   //子弹的left中心点等于 英雄机的宽度-子弹的宽度除以2
-                    _this.left = _this.l - _this.self.offsetWidth / 2;
-                    _this.top = _this.t - _this.self.offsetHeight;
+                   //子弹的left中心点等于 主角机的宽度-子弹的宽度除以2
+                _this.left = _this.l - _this.self.offsetWidth / 2;
+                _this.top = _this.t - _this.self.offsetHeight;
                     img.style.left = _this.left + &#39;px&#39;;
                     img.style.top = _this.top + &#39;px&#39;;
                 }
@@ -330,7 +330,8 @@ Engine.init();</code></pre>
                 //是否与敌机碰撞
                 for (i in Engine.enemy) {
                     //调用引擎的判断碰撞函数
-                    if (Engine.isCompact(this.self, Engine.enemy[i].self)) 
+                    if (Engine.isCompact(this.self, 
+                    Engine.enemy[i].self)) 
                         //true则删除
                         this.destroy();
                         //敌机血量减少
@@ -372,13 +373,13 @@ Engine.init();</code></pre>
         img.src = this.imgs[0];
         //插入到game中
         Engine.game.appendChild(img);
-        //赋值给英雄机
+        //赋值给主角机
         this.self = img;
            //当图片加载完成以后获取图片的高度和宽度
            var _this = this
            //在函数里this的指向会改变，所以我们提前保存下来
            img.onload = function () {
-           //英雄机的left中心点等于（game的宽度-英雄机的宽度）除以2
+           //主角机的left中心点等于（game的宽度-主角机的宽度）除以2
            _this.left = (Engine.game.offsetWidth - img.offsetWidth) / 2;
            _this.top = Engine.game.offsetHeight - img.offsetHeight;
            img.style.left = _this.left + &#39;px&#39;;
@@ -388,7 +389,7 @@ Engine.init();</code></pre>
             _this.shoot();
              };
          },
-          //英雄机移动事件
+          //主角机移动事件
           move: function () {
           //类似放大镜事件
           var _this = this;
@@ -452,15 +453,15 @@ Engine.init();</code></pre>
                 this.allHero = document.querySelectorAll(&#39;.life img&#39;);
                 this.allHero[0].remove();
                 console.log(this.allHeart, this.allHero[0]);
-                //英雄机血量为0,游戏结束
+                //主角机血量为0,游戏结束
                 if (this.life &lt;= 0) {
                     this.destroy();
                 }
             },
             destroy: function () {
-                //删除英雄机
+                //删除主角机
                 this.self.remove();
-                //执行英雄机爆炸事件函数
+                //执行主角机爆炸事件函数
                 this.bang();
                 //停止发射子弹
                 clearInterval(this.shootTimer);
@@ -468,7 +469,7 @@ Engine.init();</code></pre>
                 Engine.gameOver();
             },
         }
-        //在游戏没开始的时候不能出现英雄机和子弹所以Hero.init()要放在引擎里面</code></pre>
+        //在游戏没开始的时候不能出现主角机和子弹所以Hero.init()要放在引擎里面</code></pre>
 <p>创建敌机</p>
 <pre><code class="javascript">        function Enemy(blood, speed, imgs, scroe) {
             //分数
@@ -524,11 +525,11 @@ Engine.init();</code></pre>
                 this.self.offsetHeight) {
                     this.destroy();
                 }
-                //判断与英雄机相撞
+                //判断与主角机相撞
                 if (Engine.isCompact(this.self, Hero.self)) {
                     //执行血量下降事件
                     this.destroy();
-                    //英雄机执行血量下降事件
+                    //主角机执行血量下降事件
                     Hero.die();
                 }
             },
@@ -565,7 +566,7 @@ function SmallEnemy() {
        Enemy.call(this, 1, s, [&#39;image/enemy1.png&#39;, &#39;image/xx.gif&#39;], 10)
 }
 SmallEnemy.prototype = {
-       //改变原型指向Enemy
+
        constructor: SmallEnemy,
        __proto__: Enemy.prototype
 };
@@ -574,7 +575,7 @@ function MiddleEnemy() {
        Enemy.call(this, 5, s, [&#39;image/enemy2.png&#39;, &#39;image/zz.gif&#39;], 20)
         }
         MiddleEnemy.prototype = {
-            //改变原型指向Enemy
+
             constructor: MiddleEnemy,
             __proto__: Enemy.prototype
         }
@@ -584,7 +585,7 @@ function LargeEnemy() {
       Enemy.call(this, 10, s, [&#39;image/enemy3.png&#39;, &#39;image/dd.gif&#39;], 50)
       }
         LargeEnemy.prototype = {
-            //改变原型指向Enemy
+
             constructor: LargeEnemy,
             __proto__: Enemy.prototype
         }</code></pre>
@@ -599,15 +600,7 @@ function LargeEnemy() {
             <ul id="audio-list" style="display:none">
                 
                 
-                <li title='0' data-url='/statics/de1.flac'></li>
-                
-                    
-                
-                <li title='1' data-url='/statics/de2.flac'></li>
-                
-                    
-                
-                <li title='2' data-url='/statics/de3.flac'></li>
+                <li title='0' data-url='/statics/de3.flac'></li>
                 
                     
             </ul>
